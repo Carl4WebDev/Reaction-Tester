@@ -1,0 +1,11 @@
+#red {
+    float: left;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    display: none;
+    position: absolute;
+}
+#colors {
+    color: antiquewhite aqua  black green grey;
+}
