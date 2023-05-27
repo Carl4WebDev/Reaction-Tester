@@ -1,11 +1,22 @@
-#red {
-    float: left;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+
+.dashboard-content {
+    text-align:center;
+}
+
+.shape {
     width: 200px;
-    height: 200px;
+    height: 200px; 
     background-color: red;
     display: none;
     position: absolute;
-}
-#colors {
-    color: antiquewhite aqua  black green grey;
 }

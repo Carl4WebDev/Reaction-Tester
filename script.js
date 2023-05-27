@@ -1,14 +1,12 @@
-
-
-// Remember: variables that are defined outside of the function can be reuse, in the contrast.
-// 
+ 
 var start = new Date().getTime();
 
 function makeShapeAppear() {
     // To make the shapes appear.
-    document.getElementById("red").style.display = "block";
+    document.querySelector('.shape').style.display = "block";
     start = new Date().getTime();
 }
+
 function appearAfterDelay() {
     var left = Math.random () * 80;
     var top = Math.random () * 70;
@@ -16,36 +14,36 @@ function appearAfterDelay() {
     var height = Math.random () * 300;
     
     if (Math.random() > 0.5){
-        document.getElementById("red").style.borderRadius = "50px";
+        document.querySelector('.shape').style.borderRadius = "50px";
     }else{
-        document.getElementById("red").style.borderRadius = "0%";
+        document.querySelector('.shape').style.borderRadius = "0%";
     }
-
-    document.getElementById("red").style.backgroundColor = randomColorGen();
-
-    document.getElementById("red").style.width = width + "px";
-    document.getElementById("red").style.left = height + "px";
-
-    document.getElementById("red").style.left = left + "%";
-    document.getElementById("red").style.top = top + "%";
-  
+    
+    document.querySelector('.shape').style.backgroundColor = randomColorGen();
+    
+    document.querySelector('.shape').style.width = width + "px";
+    document.querySelector('.shape').style.left = height + "px";
+    
+    document.querySelector('.shape').style.left = left + "%";
+    document.querySelector('.shape').style.top = top + "%";
+    
     // To have 2s time gap after clicking the first block. 
     setTimeout(makeShapeAppear, Math.random() * 2000);
     
 }
-appearAfterDelay();
-document.getElementById("red").onclick = function() {
+
+document.querySelector('.shape').onclick = function() {
     // To make the shapes disappear when cliked.
-    document.getElementById("red").style.display = "none"; 
+    document.querySelector('.shape').style.display = "none"; 
     var end = new Date().getTime();
     
     var timeTaken = (end - start) / 1000;
     
-    document.getElementById("timeTaken").innerHTML = timeTaken + "s";
+    document.querySelector(".score").innerHTML = timeTaken + "s";
     // To apply the function to this code. 
     appearAfterDelay();
+    
 }
-
 function randomColorGen () {
     var letters = '123456789ABCD' .split('');
     var color = "#";
@@ -54,4 +52,5 @@ function randomColorGen () {
     }
     return color;
 }
+appearAfterDelay();
 
