@@ -52,5 +52,22 @@ function randomColorGen () {
     }
     return color;
 }
+
+function randomImage(){
+    var backgroundClasses = [
+        "background-image1",
+        "background-image2",
+        "background-image3",
+    ];
+    var randomIndex = Math.floor(Math.random() * backgroundClasses.length);
+    
+    var randomBackgroundClass = backgroundClasses[randomIndex];
+
+    var element = document.getElementById("bg-img");
+    element.classList.add(randomBackgroundClass);
+}
+
+  
+randomImage()
 appearAfterDelay();
 

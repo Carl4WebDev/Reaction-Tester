@@ -20,3 +20,27 @@ body {
     display: none;
     position: absolute;
 }
+
+.random-background {
+    background-image: url("images/cool-dog.png"); /* Default background image */
+}
+  
+.background-image1 {
+    background-image: url("images/dancing-mongoose.jfif");
+}
+  
+.background-image2 {
+    background-image: url("images/smiling-monkey.jfif");
+}
+  
+.background-image3 {
+    background-image: url("images/under-arrest-badger.jpg");
+}
+
+#bg-img {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+  
+
