@@ -1,73 +1,76 @@
- 
-var start = new Date().getTime();
+// Get the shape element
+const shapeElement = document.querySelector('.shape');
 
+// Get the score element
+const scoreElement = document.querySelector('.score');
+
+// Get the background image element
+const bgImgElement = document.getElementById('bg-img');
+
+// Set the initial start time
+let start = new Date().getTime();
+
+// Generate a random color code
+function randomColorGen() {
+  const letters = '123456789ABCD'.split('');
+  let color = '#';
+  for (let i = 0; i < 6; i++) {
+    color += letters[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+// Set a random background image class for the game
+function randomImage() {
+  const backgroundClasses = [
+    'background-image1',
+    'background-image2',
+    'background-image3',
+  ];
+  const randomIndex = Math.floor(Math.random() * backgroundClasses.length);
+  const randomBackgroundClass = backgroundClasses[randomIndex];
+  bgImgElement.classList = [randomBackgroundClass];
+}
+
+// Make the shape appear on the screen
 function makeShapeAppear() {
-    // To make the shapes appear.
-    document.querySelector('.shape').style.display = "block";
-    start = new Date().getTime();
+  shapeElement.style.display = 'block';
+  start = new Date().getTime();
 }
 
+// Set the shape properties, such as position, size, and color, and schedule the appearance of the shape after a delay
 function appearAfterDelay() {
-    var left = Math.random () * 80;
-    var top = Math.random () * 70;
-    var width = (Math.random () * 200) + 200;
-    var height = Math.random () * 300;
-    
-    if (Math.random() > 0.5){
-        document.querySelector('.shape').style.borderRadius = "50px";
-    }else{
-        document.querySelector('.shape').style.borderRadius = "0%";
-    }
-    
-    document.querySelector('.shape').style.backgroundColor = randomColorGen();
-    
-    document.querySelector('.shape').style.width = width + "px";
-    document.querySelector('.shape').style.left = height + "px";
-    
-    document.querySelector('.shape').style.left = left + "%";
-    document.querySelector('.shape').style.top = top + "%";
-    
-    // To have 2s time gap after clicking the first block. 
-    setTimeout(makeShapeAppear, Math.random() * 2000);
-    
+  const left = Math.random() * 80;
+  const top = Math.random() * 70;
+  const width = Math.random() * 200 + 200;
+  const height = Math.random() * 300;
+
+  shapeElement.style.borderRadius = Math.random() > 0.5 ? '50px' : '0%';
+  shapeElement.style.backgroundColor = randomColorGen();
+  shapeElement.style.width = width + 'px';
+  shapeElement.style.height = height + 'px';
+  shapeElement.style.left = left + '%';
+  shapeElement.style.top = top + '%';
+
+  // Schedule the appearance of the shape after a random time delay
+  setTimeout(makeShapeAppear, Math.random() * 2000);
 }
 
-document.querySelector('.shape').onclick = function() {
-    // To make the shapes disappear when cliked.
-    document.querySelector('.shape').style.display = "none"; 
-    var end = new Date().getTime();
-    
-    var timeTaken = (end - start) / 1000;
-    
-    document.querySelector(".score").innerHTML = timeTaken + "s";
-    // To apply the function to this code. 
-    appearAfterDelay();
-    
-}
-function randomColorGen () {
-    var letters = '123456789ABCD' .split('');
-    var color = "#";
-    for (var i = 0; i < 6; i++ )  {
-        color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
+// Handle the click event on the shape element
+function handleClick() {
+  shapeElement.style.display = 'none';
+  const end = new Date().getTime();
+  const timeTaken = (end - start) / 1000;
+  scoreElement.innerHTML = timeTaken + 's';
+  randomImage(); // Change the background image
+  appearAfterDelay();
 }
 
-function randomImage(){
-    var backgroundClasses = [
-        "background-image1",
-        "background-image2",
-        "background-image3",
-    ];
-    var randomIndex = Math.floor(Math.random() * backgroundClasses.length);
-    
-    var randomBackgroundClass = backgroundClasses[randomIndex];
+// Add a click event listener to the shape element
+shapeElement.onclick = handleClick;
 
-    var element = document.getElementById("bg-img");
-    element.classList.add(randomBackgroundClass);
-}
+// Set an initial random background image
+randomImage();
 
-  
-randomImage()
+// Initiate the first appearance of the shape
 appearAfterDelay();
-
