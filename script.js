@@ -40,27 +40,26 @@ function makeShapeAppear() {
 
 // Set the shape properties, such as position, size, and color, and schedule the appearance of the shape after a delay
 function appearAfterDelay() {
-    // const left = Math.random() * 80;
-    // const top = Math.random() * 70;
-    const width = Math.random() * 200 + 200;
-    const height = Math.random() * 300;
-    
-    shapeElement.style.borderRadius = Math.random() > 0.5 ? '50px' : '0%';
-    shapeElement.style.backgroundColor = randomColorGen();
-    shapeElement.style.width = width + 'px';
-    shapeElement.style.height = height + 'px';
-    // shapeElement.style.left = left + '%';
-    // shapeElement.style.top = top + '%';
-    shapeElement.style.left = '100px';
-    // shapeElement.style.top = top + '%';
-    
-    // Schedule the appearance of the shape after a random time delay
-    randomImage(); // Change the background image
-    setTimeout(makeShapeAppear, Math.random() * 2000);
+  shapeElement.style.display = 'none'; // Hide the shape
+  const left = Math.random() * 80;
+  const top = Math.random() * 70;
+  const width = Math.random() * 200 + 200;
+  const height = Math.random() * 300;
+
+  shapeElement.style.borderRadius = Math.random() > 0.5 ? '50px' : '0%';
+  shapeElement.style.backgroundColor = randomColorGen();
+  shapeElement.style.width = width + 'px';
+  shapeElement.style.height = height + 'px';
+  shapeElement.style.left = left + '%';
+  shapeElement.style.top = top + '%';
+
+  // Schedule the appearance of the shape after a random time delay
+  setTimeout(makeShapeAppear, Math.random() * 2000);
 }
 
 // Handle the click event on the shape element
 function handleClick() {
+  randomImage(); // Change the background image
   shapeElement.style.display = 'none';
   const end = new Date().getTime();
   const timeTaken = (end - start) / 1000;
@@ -72,7 +71,7 @@ function handleClick() {
 shapeElement.onclick = handleClick;
 
 // Set an initial random background image
-
+randomImage();
 
 // Initiate the first appearance of the shape
 appearAfterDelay();

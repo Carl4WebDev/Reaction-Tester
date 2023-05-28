@@ -40,7 +40,9 @@ body {
     background-image: url("images/under-arrest-badger.jpg");
 }
 
-#bg-img {
+.shape #bg-img {
+    width: inherit;
+    height: inherit;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
