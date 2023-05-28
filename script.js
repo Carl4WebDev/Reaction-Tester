@@ -74,8 +74,8 @@ function handleClick() {
 function gameover(){
     const end = new Date().getTime()
     const currentTime = (end - start) / 1000
-    if( currentTime > 10){
-        return alert('gameover')
+    if( currentTime > 3){
+        return alert('gameover: ' + currentTime)
     }
     
 }
