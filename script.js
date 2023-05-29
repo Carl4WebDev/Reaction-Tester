@@ -4,20 +4,23 @@ const shapeElement = document.querySelector('.shape');
 // Get the score element
 const scoreElement = document.querySelector('.score');
 
+const timeElement = document.querySelector('.time');
+
 // Get the background image element
 const bgImgElement = document.getElementById('bg-img');
 
 // Set the initial start time
 let start = new Date().getTime();
+
 // Generate a random color code
-function randomColorGen() {
-  const letters = '123456789ABCD'.split('');
-  let color = '#';
-  for (let i = 0; i < 6; i++) {
-      color += letters[Math.floor(Math.random() * 16)];
-    }
-    return color;
-}
+// function randomColorGen() {
+//   const letters = '123456789ABCD'.split('');
+//   let color = '#';
+//   for (let i = 0; i < 6; i++) {
+//       color += letters[Math.floor(Math.random() * 16)];
+//     }
+//     return color;
+// }
 
 // Set a random background image class for the game
 function randomImage() {
@@ -25,6 +28,7 @@ function randomImage() {
         'background-image1',
         'background-image2',
         'background-image3',
+        'background-image4',
   ];
   const randomIndex = Math.floor(Math.random() * backgroundClasses.length);
   const randomBackgroundClass = backgroundClasses[randomIndex];
@@ -51,7 +55,7 @@ function appearAfterDelay() {
         shapeElement.style.borderRadius = '0%';
         bgImgElement.style.borderRadius = '0%';
     }
-    shapeElement.style.backgroundColor = randomColorGen();
+    // shapeElement.style.backgroundColor = randomColorGen();
     shapeElement.style.width = width + 'px';
     shapeElement.style.height = height + 'px';
     shapeElement.style.left = left + '%';
@@ -62,13 +66,17 @@ function appearAfterDelay() {
 }
 
 // Handle the click event on the shape element
+let counter = 0;
 function handleClick() {
     randomImage(); // Change the background image
+    counter++
     shapeElement.style.display = 'none';
     const end = new Date().getTime();
     const timeTaken = (end - start) / 1000;
     gameover()
-  scoreElement.innerHTML = timeTaken + 's';
+  timeElement.innerHTML = timeTaken + 's';
+  scoreElement.innerHTML = counter;
+
   appearAfterDelay();
 }
 function gameover(){

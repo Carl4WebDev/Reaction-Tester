@@ -10,36 +10,38 @@ body {
     display: flex;
     height: 100vh;
     justify-content: center;
+    background: url(images/forest-g1ccbc41cc_1280.jpg);
+    opacity: 1;
 }
 
 .dashboard-content {
     text-align:center;
+    color: whitesmoke;
 }
 
 .shape {
     width: 200px;
     height: 200px; 
-    background-color: red;
     display: none;
     position: absolute;
 }
 
-.random-background {
-    background-image: url("images/cool-dog.png"); 
-}
-  
+
 .background-image1 {
-    background-image: url("images/dancing-mongoose.jfif");
-}
-  
-.background-image2 {
-    background-image: url("images/smiling-monkey.jfif");
-}
-  
-.background-image3 {
-    background-image: url("images/under-arrest-badger.jpg");
+    background-image: url("images/dancing-mongoose-removebg-preview.png");
 }
 
+.background-image2 {
+    background-image: url("images/smiling-monkey-removebg-preview.png");
+}
+
+.background-image3 {
+    background-image: url("images/under-arrest-badger-removebg-preview.png");
+}
+
+.background-image4 {
+    background-image: url("images/cool-dog-removebg-preview.png"); 
+}
 .shape #bg-img {
     width: inherit;
     height: inherit;
