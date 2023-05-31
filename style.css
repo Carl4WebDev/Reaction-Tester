@@ -1,7 +1,23 @@
 body {
     margin: 0;
     padding: 0;
+    cursor: none;
 }
+.cursor {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    display: block;
+}
+.cursor img {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: inherit;
+    height: inherit;
+    z-index: 2;
+}
+
 .container {
     height: 100vh;
     border: 5px solid black;

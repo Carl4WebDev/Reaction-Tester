@@ -9,8 +9,16 @@ const timeElement = document.querySelector('.time');
 // Get the background image element
 const bgImgElement = document.getElementById('bg-img');
 
+
+
 // Set the initial start time
 let start = new Date().getTime();
+
+//cursor
+const cursorElement = document.querySelector('.cursor')
+document.addEventListener('mousemove', e => {
+    cursorElement.setAttribute('style', 'top:' +(e.pageY - 50 ) + 'px; left: ' +(e.pageX - 50) + 'px;')
+})
 
 // Generate a random color code
 // function randomColorGen() {
@@ -73,16 +81,17 @@ function handleClick() {
     shapeElement.style.display = 'none';
     const end = new Date().getTime();
     const timeTaken = (end - start) / 1000;
+    timeElement.innerHTML = timeTaken + 's';
     gameover()
-  timeElement.innerHTML = timeTaken + 's';
-  scoreElement.innerHTML = counter;
+    scoreElement.innerHTML = counter;
 
-  appearAfterDelay();
+    appearAfterDelay();
 }
 function gameover(){
     const end = new Date().getTime()
-    const currentTime = (end - start) / 1000
+    let currentTime = (end - start) / 1000
     if( currentTime > 3){
+        counter = 0;
         return alert('gameover: ' + currentTime)
     }
     
