@@ -68,7 +68,7 @@ function appearAfterDelay() {
     shapeElement.style.height = height + 'px';
     shapeElement.style.left = left + '%';
     shapeElement.style.top = top + '%';
-    
+
     // Schedule the appearance of the shape after a random time delay
     setTimeout(makeShapeAppear, Math.random() * 2000);
 }
@@ -84,7 +84,6 @@ function handleClick() {
     timeElement.innerHTML = timeTaken + 's';
     gameover()
     scoreElement.innerHTML = counter;
-
     appearAfterDelay();
 }
 function gameover(){
@@ -92,10 +91,11 @@ function gameover(){
     let currentTime = (end - start) / 1000
     if( currentTime > 3){
         counter = 0;
-        return alert('gameover: ' + currentTime)
+        return alert('gameover!')
     }
     
 }
+
 // Add a click event listener to the shape element
 shapeElement.onclick = handleClick;
 

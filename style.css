@@ -27,6 +27,9 @@ body {
     height: 100vh;
     justify-content: center;
     background: url(images/forest-g1ccbc41cc_1280.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     opacity: 1;
 }
 
@@ -65,6 +68,13 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     
+}
+
+@media (max: 500px) {
+    .shape {
+        width: 100px;
+        height: 100px; 
+    }
 }
 
 
