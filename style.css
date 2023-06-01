@@ -19,14 +19,17 @@ body {
 }
 
 .container {
-    height: 100vh;
-    border: 5px solid black;
+    height: inherit;
+    width:inherit ;
 }
 .dashboard-container {
     display: flex;
     height: 100vh;
     justify-content: center;
     background: url(images/forest-g1ccbc41cc_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     opacity: 1;
 }
 
@@ -65,6 +68,24 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     
+}
+
+ .gameover-container{
+    background-color: aliceblue;
+    position: absolute;
+    top: 11rem;
+    height: 200px;
+    width: 400px;
+
+    display: none;
+}
+.gameover-container .text-content{
+    text-align: center;
+}
+.gameover-container img {
+    height: inherit;
+    width: inherit;
+
 }
 
 
