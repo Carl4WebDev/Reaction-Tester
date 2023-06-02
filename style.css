@@ -7,7 +7,6 @@ body {
     width: 100px;
     height: 100px;
     position: absolute;
-    display: block;
 }
 .cursor img {
     background-position: center;
@@ -15,21 +14,19 @@ body {
     background-size: cover;
     width: inherit;
     height: inherit;
-    z-index: 2;
 }
 
 .container {
-    height: inherit;
-    width:inherit ;
+    height: 100vh;
 }
 .dashboard-container {
     display: flex;
     height: 100vh;
     justify-content: center;
     background: url(images/forest-g1ccbc41cc_1280.jpg);
-    background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     opacity: 1;
 }
 
@@ -69,23 +66,27 @@ body {
     background-repeat: no-repeat;
     
 }
-
- .gameover-container{
-    background-color: aliceblue;
-    position: absolute;
-    top: 11rem;
-    height: 200px;
-    width: 400px;
-
-    display: none;
-}
-.gameover-container .text-content{
-    text-align: center;
-}
-.gameover-container img {
+.gameover {
+    background: url('images/game-over-glitch.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: inherit;
     width: inherit;
+    justify-content: center;
+    /* align-items: center; */
+    color: darkred;
+    font-size: xx-large;
+    font-weight: bold;
 
+}
+
+
+@media (max: 500px) {
+    .shape {
+        width: 100px;
+        height: 100px; 
+    }
 }
 
 

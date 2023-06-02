@@ -92,13 +92,17 @@ function gameover(){
     let currentTime = (end - start) / 1000
     if( currentTime > 3){
         counter = 0;
-        setTimeout(gameoverBanner, 1000)
+        
+        document.querySelector('.dashboard-container').classList.add('gameover');
+        document.querySelector('.dashboard-container').innerHTML = 'Refresh The Page!';
+        bgImgElement.style.display = 'none'
+        document.querySelector('.cursor img').style.display = 'none'
+        document.querySelector('body').style.cursor = 'pointer'
+
     }
     
 }
-function gameoverBanner(){
-    gameoverElement.style.display = 'block'
-}
+
 // Add a click event listener to the shape element
 shapeElement.onclick = handleClick;
 
