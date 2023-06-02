@@ -5,6 +5,7 @@ const shapeElement = document.querySelector('.shape');
 const scoreElement = document.querySelector('.score');
 
 const timeElement = document.querySelector('.time');
+const gameoverElement = document.querySelector('.gameover-container');
 
 // Get the background image element
 const bgImgElement = document.getElementById('bg-img');
@@ -69,6 +70,7 @@ function appearAfterDelay() {
     shapeElement.style.left = left + '%';
     shapeElement.style.top = top + '%';
 
+
     // Schedule the appearance of the shape after a random time delay
     setTimeout(makeShapeAppear, Math.random() * 2000);
 }
@@ -91,10 +93,18 @@ function gameover(){
     let currentTime = (end - start) / 1000
     if( currentTime > 3){
         counter = 0;
-        return alert('gameover!')
+        
+        document.querySelector('.dashboard-container').classList.add('gameover');
+        document.querySelector('.dashboard-container').innerHTML = 'Refresh The Page!';
+        bgImgElement.style.display = 'none'
+        document.querySelector('.cursor img').style.display = 'none'
+        document.querySelector('body').style.cursor = 'pointer'
+
+        
     }
     
 }
+
 
 // Add a click event listener to the shape element
 shapeElement.onclick = handleClick;
