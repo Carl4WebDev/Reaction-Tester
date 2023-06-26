@@ -103,7 +103,7 @@ function gameover(){
         
     }
     
-}
+} 
 
 
 // Add a click event listener to the shape element
