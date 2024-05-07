@@ -33,6 +33,7 @@ body {
 .dashboard-content {
     text-align:center;
     color: whitesmoke;
+    
 }
 
 .shape {
@@ -57,6 +58,24 @@ body {
 
 .background-image4 {
     background-image: url("images/cool-dog-removebg-preview.png"); 
+}
+.background-image5 {
+    background-image: url("images/cute-cat1.png"); 
+}
+.background-image6 {
+    background-image: url("images/cute-cat2.png"); 
+}
+.background-image7 {
+    background-image: url("images/cute-cat3.png"); 
+}
+.background-image8 {
+    background-image: url("images/cute-dog1.png"); 
+}
+.background-image9 {
+    background-image: url("images/cute-dog2.png"); 
+}
+.background-image10 {
+    background-image: url("images/cute-dog3.png"); 
 }
 .shape #bg-img {
     width: inherit;
@@ -107,6 +126,5 @@ footer a {
         height: 100px; 
     }
 }
-
 
 

@@ -38,6 +38,12 @@ function randomImage() {
         'background-image2',
         'background-image3',
         'background-image4',
+        'background-image5',
+        'background-image6',
+        'background-image7',
+        'background-image8',
+        'background-image9',
+        'background-image10',
   ];
   const randomIndex = Math.floor(Math.random() * backgroundClasses.length);
   const randomBackgroundClass = backgroundClasses[randomIndex];
