@@ -85,12 +85,13 @@ function appearAfterDelay() {
 let counter = 0;
 function handleClick() {
     randomImage(); // Change the background image
+    gameover(counter)
+    levelUP(counter)
     counter++
     shapeElement.style.display = 'none';
     const end = new Date().getTime();
     const timeTaken = (end - start) / 1000;
     timeElement.innerHTML = timeTaken + 's';
-    gameover(counter)
     scoreElement.innerHTML = counter;
 
     appearAfterDelay();
@@ -100,20 +101,51 @@ function gameover(score){
     let currentTime = (end - start) / 1000
     if( currentTime > 3){
         counter = 0;
-        
         document.querySelector('.dashboard-container').classList.add('gameover');
-        document.querySelector('.dashboard-container').innerHTML = 'Refresh The Page!';
+        document.querySelector('.dashboard-container').innerHTML = `Time:${currentTime}-Score:${score} - Refresh the page!`;
         bgImgElement.style.display = 'none'
         document.querySelector('.cursor img').style.display = 'none'
         document.querySelector('body').style.cursor = 'pointer'
-    }
-    if(score > 5 && ){
-
     }
     
 } 
 
 
+function levelUP(score){
+    const end = new Date().getTime()
+    let currentTime = (end - start) / 1000
+    if( score >= 10){ 
+
+        document.querySelector('.dashboard-content h2').innerHTML = 'You have level up! Kill under 2 seconds';
+        setTimeout(makeShapeAppear, Math.random() * 1000);
+        if(currentTime > 2){
+            counter = 0;
+            document.querySelector('.dashboard-container').classList.add('gameover');
+            document.querySelector('.dashboard-container').innerHTML =  `Time:${currentTime}-Score:${score} - Refresh the page!`;
+            bgImgElement.style.display = 'none'
+            document.querySelector('.cursor img').style.display = 'none'
+            document.querySelector('body').style.cursor = 'pointer'
+        }
+
+
+    }
+    if( score >= 20){ 
+
+        document.querySelector('.dashboard-content h2').innerHTML = 'You are good in this! Kill under 1 second';
+        setTimeout(makeShapeAppear, Math.random() * 500);
+        if(currentTime > 1){
+            counter = 0;
+            document.querySelector('.dashboard-container').classList.add('gameover');
+            document.querySelector('.dashboard-container').innerHTML =  `Time:${currentTime}-Score:${score} - Refresh the page!`;
+            bgImgElement.style.display = 'none'
+            document.querySelector('.cursor img').style.display = 'none'
+            document.querySelector('body').style.cursor = 'pointer'
+        }
+
+
+    }
+    
+} 
 // Add a click event listener to the shape element
 shapeElement.onclick = handleClick;
 
