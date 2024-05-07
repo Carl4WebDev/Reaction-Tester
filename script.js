@@ -90,11 +90,12 @@ function handleClick() {
     const end = new Date().getTime();
     const timeTaken = (end - start) / 1000;
     timeElement.innerHTML = timeTaken + 's';
-    gameover()
+    gameover(counter)
     scoreElement.innerHTML = counter;
+
     appearAfterDelay();
 }
-function gameover(){
+function gameover(score){
     const end = new Date().getTime()
     let currentTime = (end - start) / 1000
     if( currentTime > 3){
@@ -105,8 +106,9 @@ function gameover(){
         bgImgElement.style.display = 'none'
         document.querySelector('.cursor img').style.display = 'none'
         document.querySelector('body').style.cursor = 'pointer'
+    }
+    if(score > 5 && ){
 
-        
     }
     
 } 
