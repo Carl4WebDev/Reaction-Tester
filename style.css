@@ -44,37 +44,37 @@ body {
 }
 
 
-.background-image1 {
+.background-image0 {
     background-image: url("images/dancing-mongoose-removebg-preview.png");
 }
 
-.background-image2 {
+.background-image1 {
     background-image: url("images/smiling-monkey-removebg-preview.png");
 }
 
-.background-image3 {
+.background-image2 {
     background-image: url("images/under-arrest-badger-removebg-preview.png");
 }
 
-.background-image4 {
+.background-image3 {
     background-image: url("images/cool-dog-removebg-preview.png"); 
 }
-.background-image5 {
+.background-image4 {
     background-image: url("images/cute-cat1.png"); 
 }
-.background-image6 {
+.background-image5 {
     background-image: url("images/cute-cat2.png"); 
 }
-.background-image7 {
+.background-image6 {
     background-image: url("images/cute-cat3.png"); 
 }
-.background-image8 {
+.background-image7 {
     background-image: url("images/cute-dog1.png"); 
 }
-.background-image9 {
+.background-image8 {
     background-image: url("images/cute-dog2.png"); 
 }
-.background-image10 {
+.background-image9 {
     background-image: url("images/cute-dog3.png"); 
 }
 .shape #bg-img {
