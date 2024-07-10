@@ -85,7 +85,7 @@ function appearAfterDelay() {
 }
 
 // Handle the click event on the shape element
-let counter = 30;
+let counter = 0;
 function handleClick() {
     gunShot()
     randomImage(); // Change the background image
