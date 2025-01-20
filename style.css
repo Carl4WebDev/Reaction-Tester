@@ -1,130 +1,198 @@
 body {
-    margin: 0;
-    padding: 0;
-    cursor: none;
+  margin: 0;
+  padding: 0;
+  cursor: none;
 }
 .cursor {
-    width: 100px;
-    height: 100px;
-    position: absolute;
+  width: 100px;
+  height: 100px;
+  position: absolute;
 }
-.cursor img {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: inherit;
-    height: inherit;
+.cursor {
+    position: absolute;
+    width: 80px; /* Customize the cursor size */
+    height: 80px;
+    background: url("images/target.png") no-repeat center center; /* Add your cursor image here */
+    background-size: contain;
+    pointer-events: none; /* Ensure the cursor doesn't interfere with clicks */
+    z-index: 1000; /* Ensure it is on top of all elements */
+    pointer-events: none;
 }
 
 .container {
-    height: 95vh;
+  height: 95vh;
 }
 .dashboard-container {
-    display: flex;
-    height: 95vh;
-    justify-content: center;
-    background: url(images/forest-g1ccbc41cc_1280.jpg);
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    opacity: 1;
+  display: flex;
+  height: 95vh;
+  justify-content: center;
+  background: url(images/forest-g1ccbc41cc_1280.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 1;
 }
 
 .dashboard-content {
-    text-align:center;
-    color: whitesmoke;
-    
+  text-align: center;
+  color: whitesmoke;
 }
 
 .shape {
-    width: 200px;
-    height: 200px; 
-    display: none;
-    position: absolute;
+  width: 200px;
+  height: 200px;
+  display: none;
+  position: absolute;
 }
 
-
 .background-image0 {
-    background-image: url("images/dancing-mongoose-removebg-preview.png");
+  background-image: url("images/dancing-mongoose-removebg-preview.png"); //mongoose
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  width: 100%; 
+  height: 100%;
+  object-fit: contain;
+  z-index: 0;
 }
 
 .background-image1 {
-    background-image: url("images/smiling-monkey-removebg-preview.png");
+  background-image: url("images/smiling-monkey-removebg-preview.png"); // monkey
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  width: 100%; 
+  height: 100%;
+  object-fit: contain;
+  z-index: 0;
 }
+
 
 .background-image2 {
-    background-image: url("images/under-arrest-badger-removebg-preview.png");
+  background-image: url("images/under-arrest-badger-removebg-preview.png"); //cat
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  width: 100%; 
+  height: 100%;
+  object-fit: contain;
+  z-index: 0;
 }
-
 .background-image3 {
-    background-image: url("images/cool-dog-removebg-preview.png"); 
+  background-image: url("images/cute-cat1.png"); //cat
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  width: 100%; 
+  height: 100%;
+  object-fit: contain;
+  z-index: 0;
 }
 .background-image4 {
-    background-image: url("images/cute-cat1.png"); 
+  background-image: url("images/cute-cat2.png"); //cat
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  width: 100%; 
+  height: 100%;
+  object-fit: contain;
+  z-index: 0;
 }
 .background-image5 {
-    background-image: url("images/cute-cat2.png"); 
+  background-image: url("images/cute-cat3.png"); //cat
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  width: 100%; 
+  height: 100%;
+  object-fit: contain;
+  z-index: 0;
 }
 .background-image6 {
-    background-image: url("images/cute-cat3.png"); 
+  background-image: url("images/cool-dog-removebg-preview.png"); //dog
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  width: 100%; 
+  height: 100%;
+  object-fit: contain;
+  z-index: 0;
 }
 .background-image7 {
-    background-image: url("images/cute-dog1.png"); 
+  background-image: url("images/cute-dog1.png"); //dog
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  width: 100%; 
+  height: 100%;
+  object-fit: contain;
+  z-index: 0;
 }
 .background-image8 {
-    background-image: url("images/cute-dog2.png"); 
+  background-image: url("images/cute-dog2.png"); //dog
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  width: 100%; 
+  height: 100%;
+  object-fit: contain;
+  z-index: 0;
 }
 .background-image9 {
-    background-image: url("images/cute-dog3.png"); 
+  background-image: url("images/cute-dog3.png"); //dog
+  background-size: contain; 
+  background-repeat: no-repeat;
+  background-position: center; 
+  width: 100%; 
+  height: 100%;
+  object-fit: contain;
+  z-index: 0;
 }
+
 .shape #bg-img {
-    width: inherit;
-    height: inherit;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    
+  width: inherit;
+  height: inherit;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .gameover {
-    background: url('images/game-over-glitch.gif');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: inherit;
-    width: inherit;
-    justify-content: center;
-    /* align-items: center; */
-    color: darkred;
-    font-size: xx-large;
-    font-weight: bold;
-
+  background: url("images/game-over-glitch.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: inherit;
+  width: inherit;
+  justify-content: center;
+  /* align-items: center; */
+  color: darkred;
+  font-size: xx-large;
+  font-weight: bold;
 }
 
 footer {
-    background-color: #194626;
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    width: 100%;
-    height: 5vh;
+  background-color: #194626;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 5vh;
 }
 footer a {
-    color: whitesmoke;
-    text-decoration: none;
+  color: whitesmoke;
+  text-decoration: none;
 }
 
 @media (max: 500px) {
-    .shape {
-        width: 100px;
-        height: 100px; 
-    }
+  .shape {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 @media (max: 500px) {
-    .shape {
-        width: 100px;
-        height: 100px; 
-    }
+  .shape {
+    width: 100px;
+    height: 100px;
+  }
 }
-
-
